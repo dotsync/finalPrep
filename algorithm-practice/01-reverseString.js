@@ -2,7 +2,7 @@
  * @param {character[]} s
  * @return {void} Do not return anything, modify s in-place instead.
  */
- var reverseString = function(s) {
+reverseString = function(s) {
   let last = s.length-1;
   for (let first = 0; first < last; first ++) {
       let temp = s[first];
@@ -12,3 +12,5 @@
   }
   return s;
 };
+
+module.exports = reverseString;
