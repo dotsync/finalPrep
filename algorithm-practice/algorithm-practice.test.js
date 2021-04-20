@@ -1,4 +1,5 @@
-const reverseString = require('./01-reverseString')
+const reverseString = require('./01-reverseString');
+const isPalindrome = require('./02-isPalindrome');
 
 describe('Easy problems', () => {
   describe('String problems', () => {
@@ -13,5 +14,18 @@ describe('Easy problems', () => {
         expect(reverseString([])).toStrictEqual([])
       })
     })
+    describe('isPalindrome toy problem', () => {
+      test('should detect that the input is a palindrome', () => {
+        expect(isPalindrome("A man, a plan, a canal: Panama")).toBe(true)
+      })
+      test('should detect that the input is NOT a palindrome', () => {
+        expect(isPalindrome("race a car")).toBe(false)
+      })
+      test('should work for invalid inputs', () => {
+        expect(isPalindrome("")).toBe(true)
+      })
+
+    })
+
   })
 })
