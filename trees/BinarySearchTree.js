@@ -11,3 +11,5 @@ class BinarySearchTree {
     this.root = null;
   }
 }
+
+module.exports = { BSTNode, BinarySearchTree}
