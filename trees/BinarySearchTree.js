@@ -12,6 +12,13 @@ class BinarySearchTree {
   }
 
   // insertNode
+    // base case is value already exists
+      // if left is less than
+        // and if right is empty, add node
+        // else not empty so recursivly call this.insert
+      // else if right is more than
+        // and if right is empty, add node
+        // else not empty so recursivly call this.insert
   // findNode
   // validate
 
