@@ -1,8 +1,8 @@
 class BSTNode {
   constructor(val) {
     this.val = val;
-    this.left = left;
-    this.right = right;
+    this.left = null;
+    this.right = null;
   }
 }
 
@@ -12,4 +12,4 @@ class BinarySearchTree {
   }
 }
 
-module.exports = { BSTNode, BinarySearchTree}
+module.exports = { BSTNode, BinarySearchTree }
