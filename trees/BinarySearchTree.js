@@ -10,6 +10,11 @@ class BinarySearchTree {
   constructor() {
     this.root = null;
   }
+
+  // insertNode
+  // findNode
+  // validate
+
 }
 
 module.exports = { BSTNode, BinarySearchTree }
