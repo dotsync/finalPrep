@@ -18,10 +18,13 @@ describe('Binary Search Tree', () => {
       const bst = new BinarySearchTree;
       expect(bst.root).toBeNull();
     })
-
-    describe('insert', () => {
+    describe('#insert method', () => {
       test('should insert into an empty Tree', () => {
         const bst = new BinarySearchTree;
+        bst.insert(100);
+        expect(bst.root.val).toBe(100);
+        expect(bst.root.left).toBeNull();
+        expect(bst.root.right).toBeNull();
       })
       test('should insert new nodes in the correct position', () => {
 
