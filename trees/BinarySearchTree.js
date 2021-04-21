@@ -12,19 +12,30 @@ class BinarySearchTree {
   }
 
   insert(val, currentNode = this.root) {
-    // base case is value already exists
     // check for empty tree
-    if (currentNode == null) this.root = new BSTNode(val)
-    // if left is less than
-        // and if right is empty, add node
-        // else not empty so recursivly call this.insert
-    // else if right is more than
+    if (currentNode == null) {
+      this.root = new BSTNode(val);
+      // return to get out of method
+      return;
+    }
+    // base case is value already exists
+    if (currentNode.val === val) return -1;
+    // if left is less than current
+    if (val < currentNode.val) {
+      // and if left is empty, add node
+      if (currentNode.left == null) {
+        currentNode.left = new BSTNode(val);
+      } else { // else not empty so recursivly call this.insert
+        return this.insert(val, currentNode.left);
+      }
+    } else if (val > currentNode.val) { // else if right is more than current
       // and if right is empty, add node
-      // else not empty so recursivly call this.insert
+      if (currentNode.right == null) {
+        currentNode.right = new BSTNode(val);
+      } else { // else not empty so recursivly call this.insert
+        return this.insert(val, currentNode.right);
+      }
+    }
   }
-  // findNode
-  // validate
-
 }
-
 module.exports = { BSTNode, BinarySearchTree }
