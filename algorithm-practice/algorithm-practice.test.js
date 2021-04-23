@@ -29,16 +29,6 @@ describe('Easy problems', () => {
 
   })
   describe('Tree problems', () => {
-    describe('validateBST toy problem', () => {
-      test('should validate an empty tree', () => {
 
-      })
-      test('should validate the binary search tree', () => {
-
-      })
-      test('should not validate the non binary search tree', () => {
-
-      })
-    })
   })
 })
