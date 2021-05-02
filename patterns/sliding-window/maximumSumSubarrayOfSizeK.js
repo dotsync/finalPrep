@@ -18,3 +18,6 @@ const maximumSumSubarrayOfSizeK = (array, k) => {
 }
 
 module.exports = maximumSumSubarrayOfSizeK;
+
+
+// run time O(n)
