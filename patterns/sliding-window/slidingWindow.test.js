@@ -1,4 +1,5 @@
-const maximumSumSubarrayOfSizeK = require('./maximumSumSubarrayOfSizeK')
+const maximumSumSubarrayOfSizeK = require('./maximumSumSubarrayOfSizeK');
+const smallestSubarrayForGivenSum = require('./smallestSubarrayForGivenSum');
 
 describe('Sliding Window Problems', () => {
   describe('maximumSumSubarrayOfSizeK', () => {
@@ -16,7 +17,7 @@ describe('Sliding Window Problems', () => {
   })
   describe('smallestSubarrayForGivenSum', () => {
     test('should return -1 for empty input', () => {
-      expect(smallestSubarrayForGivenSum([], 7)).toBe(-1);
+      expect(smallestSubarrayForGivenSum([], 7)).toBe(0);
     })
     test('should return the length of the smallest subarray the is equal to or greater than number given', () => {
       expect(smallestSubarrayForGivenSum([2, 1, 5, 2, 3, 2], 7)).toBe(2);
