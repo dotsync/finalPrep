@@ -14,4 +14,16 @@ describe('Sliding Window Problems', () => {
       expect(maximumSumSubarrayOfSizeK([1,2,3, 6, 1, 11, 9, 43, 2, 1, 75, 2, 2], 2)).toBe(77);
     })
   })
+  describe('smallestSubarrayForGivenSum', () => {
+    test('should return -1 for empty input', () => {
+      expect(smallestSubarrayForGivenSum([], 7)).toBe(-1);
+    })
+    test('should return the length of the smallest subarray the is equal to or greater than number given', () => {
+      expect(smallestSubarrayForGivenSum([2, 1, 5, 2, 3, 2], 7)).toBe(2);
+      expect(smallestSubarrayForGivenSum([2, 1, 5, 2, 8], 7)).toBe(1);
+      expect(smallestSubarrayForGivenSum([3, 4, 1, 1, 6], 8)).toBe(3);
+    })
+
+  })
+
 })
