@@ -1,5 +1,6 @@
 const maximumSumSubarrayOfSizeK = require('./maximumSumSubarrayOfSizeK');
 const smallestSubarrayForGivenSum = require('./smallestSubarrayForGivenSum');
+const longestSubstringWithKDistinctChars = require('./longestSubstringWithKDistinctChars')
 
 describe('Sliding Window Problems', () => {
   describe('maximumSumSubarrayOfSizeK', () => {
@@ -26,5 +27,18 @@ describe('Sliding Window Problems', () => {
     })
 
   })
-
+  describe('longestSubstringWithKDistinctChars', () => {
+    test('should return 0 if given empty string', () => {
+      expect(longestSubstringWithKDistinctChars('', 3)).toBe(0);
+    })
+    test('should return 0 if k = 0', () => {
+      expect(longestSubstringWithKDistinctChars('araaci', 0)).toBe(0);
+    })
+    test('should return the longest Substring With K Distinct Chars', () => {
+      expect(longestSubstringWithKDistinctChars('araaci', 2)).toBe(4);
+      expect(longestSubstringWithKDistinctChars('araaci', 1)).toBe(2);
+      expect(longestSubstringWithKDistinctChars('cbbebi', 3)).toBe(5);
+      expect(longestSubstringWithKDistinctChars('abbbbacdeaa', 2)).toBe(6);
+    })
+  })
 })
