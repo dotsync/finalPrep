@@ -2,6 +2,7 @@ const maximumSumSubarrayOfSizeK = require('./maximumSumSubarrayOfSizeK');
 const smallestSubarrayForGivenSum = require('./smallestSubarrayForGivenSum');
 const longestSubstringWithKDistinctChars = require('./longestSubstringWithKDistinctChars');
 const fruitsInBaskets = require('./fruitsInBaskets');
+const noRepeatSubstring = require('./noRepeatSubstring');
 
 describe('Sliding Window Problems', () => {
   describe('maximumSumSubarrayOfSizeK', () => {
@@ -53,4 +54,11 @@ describe('Sliding Window Problems', () => {
       expect(fruitsInBaskets(['A', 'B', 'C', 'B', 'B', 'C'])).toBe(5);
     })
   })
+  describe('noRepeatSubstring', () => {
+    test('should return 0 if given an empty string', () => {
+      expect(noRepeatSubstring('')).toBe(0)
+    })
+
+  })
+
 })
