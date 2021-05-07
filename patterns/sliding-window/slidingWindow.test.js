@@ -58,7 +58,10 @@ describe('Sliding Window Problems', () => {
     test('should return 0 if given an empty string', () => {
       expect(noRepeatSubstring('')).toBe(0)
     })
-
+    test('should return the length of the largest substring with no repeating chars', () => {
+      expect(noRepeatSubstring('abcacc')).toBe(3)
+      expect(noRepeatSubstring('accccc')).toBe(2)
+      expect(noRepeatSubstring('abccde')).toBe(3)
+    })
   })
-
 })
