@@ -1,6 +1,7 @@
 const maximumSumSubarrayOfSizeK = require('./maximumSumSubarrayOfSizeK');
 const smallestSubarrayForGivenSum = require('./smallestSubarrayForGivenSum');
-const longestSubstringWithKDistinctChars = require('./longestSubstringWithKDistinctChars')
+const longestSubstringWithKDistinctChars = require('./longestSubstringWithKDistinctChars');
+const fruitsInBaskets = require('./fruitsInBaskets');
 
 describe('Sliding Window Problems', () => {
   describe('maximumSumSubarrayOfSizeK', () => {
@@ -39,6 +40,17 @@ describe('Sliding Window Problems', () => {
       expect(longestSubstringWithKDistinctChars('araaci', 1)).toBe(2);
       expect(longestSubstringWithKDistinctChars('cbbebi', 3)).toBe(5);
       expect(longestSubstringWithKDistinctChars('abbbbacdeaa', 2)).toBe(6);
+    })
+  })
+  describe('fruitsInBaskets', () => {
+    test('should return 0 if given an empty row of trees', () => {
+      expect(fruitsInBaskets([])).toBe(0);
+    })
+    test('should return the correct amount of fruits', () => {
+       // Result is 3 because a, c, a is the most optimal row for collecting fruits
+      expect(fruitsInBaskets(['a', 'b', 'a', 'c', 'a'])).toBe(3);
+       // Result is 5 because b, c, b, b, c is the most optimal row for collecting fruits
+      expect(fruitsInBaskets(['A', 'B', 'C', 'B', 'B', 'C'])).toBe(5);
     })
   })
 })
