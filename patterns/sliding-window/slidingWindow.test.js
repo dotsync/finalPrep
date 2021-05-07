@@ -3,6 +3,7 @@ const smallestSubarrayForGivenSum = require('./smallestSubarrayForGivenSum');
 const longestSubstringWithKDistinctChars = require('./longestSubstringWithKDistinctChars');
 const fruitsInBaskets = require('./fruitsInBaskets');
 const noRepeatSubstring = require('./noRepeatSubstring');
+const longestSubstringWithSameLettersAfterReplacement = require('./longestSubstringWithSameLettersAfterReplacement');
 
 describe('Sliding Window Problems', () => {
   describe('maximumSumSubarrayOfSizeK', () => {
@@ -64,4 +65,8 @@ describe('Sliding Window Problems', () => {
       expect(noRepeatSubstring('abccde')).toBe(3)
     })
   })
+  describe('longestSubstringWithSameLettersAfterReplacement', () => {
+
+  })
+
 })
